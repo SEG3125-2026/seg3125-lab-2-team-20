@@ -13,12 +13,12 @@ const products=[
     {name: "Orange Juice", vegetarian:true, glutenFree:true,organic:false, price: 3.00}
 ];
 
-function openMenu(){
-    const tabs = document.getElementsByClassName("tab");
+function openMenu(tabName){
+    const tabs = document.getElementsByClassName("tabContent");
     for(let i=0; i<tabs.length; i++){
-        tabs[i].style.display="block";
+        tabs[i].style.display="none";
     }
-    const clickedTab=event.target.innerText.toLowerCase();
+    const clickedTab=tabName;
     document.getElementById(clickedTab).style.display="block";
 
     if (clickedTab==="products"){
@@ -30,11 +30,11 @@ function openMenu(){
 function showProducts(){
     const diet=document.getElementById("diet").value;
     const productType = document.getElementById("productType").value;
-    let filteredProducts=products.filter(products =>{
+    let filteredProducts=products.filter(product =>{
         if (diet === "vegetarian" && !product.vegetarian) {
             return false;
         }
-        if (diet === "glutenFree" && !product.glutenFree) {
+        if (diet === "gluten-free" && !product.glutenFree) {
             return false;
         }
         if (productType === "organic" && !product.organic) {
@@ -73,7 +73,7 @@ function addToCart(){
 }
 
 function displayCart(){
-    const cartDiv=document.getElementById("cartItems");
+    const cartDiv=document.getElementById("showCart");
     cartDiv.innerHTML="";
     let total=0;
     cart.forEach((item) =>{
