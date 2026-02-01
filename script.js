@@ -6,7 +6,7 @@ const products=[
     { name: "Bread", vegetarian:true, glutenFree:false,organic:false, price: 2.35},
     { name: "Salmon", vegetarian:false, glutenFree:true,organic:true, price: 10.00},
     { name: "Apples", vegetarian:true, glutenFree:true,organic:true, price: 3.00},
-    { name: "Cheese", vegetarian:true, glutenFree:true,organic:false, price: 4.25}
+    { name: "Cheese", vegetarian:true, glutenFree:true,organic:false, price: 4.25},
     {name: "Milk", vegetarian:true, glutenFree:true,organic:false, price: 2.50},
     {name: "Eggs", vegetarian:true, glutenFree:true,organic:false, price: 2.75},
     {name: "Gluten-Free Pasta", vegetarian:true, glutenFree:true,organic:false, price: 3.50},
